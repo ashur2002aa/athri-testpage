@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page with Sections</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;  /* Soft light gray */
+            color: #333;
+            padding: 20px;
+        }
+
+      
+        .search-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .search-container h1 {
+            font-size: 32px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 450px;
+            padding: 15px;
+            font-size: 18px;
+            border: 2px solid #007BFF;
+            border-radius: 50px;
+            outline: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus {
+            border-color: #0056b3;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Container for Sections */
+        .sections-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+
+        /* Section Styling */
+        .section {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .section h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #007BFF;
+            text-transform: uppercase;
+        }
+
+        /* Item Styling */
+        .item {
+            display: block;
+            background-color: #f9f9f9;
+            padding: 18px;
+            margin: 12px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: #555;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .item:hover {
+            background-color: #e6f0ff;
+            color: #007BFF;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Image Styling for Square Images */
+        .item img {
+            width: 100%;
+            height: 200px;  /* Adjust the height to maintain square shape */
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px; /* Space between image and text */
+        }
+
+        /* Adding smooth transition for hover effect on links */
+        .item p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .search-box {
+                width: 90%;
+            }
+
+            .section h3 {
+                font-size: 22px;
+            }
+
+            .item {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .search-box {
+                font-size: 14px;
+                padding: 12px;
+            }
+
+            .section h3 {
+                font-size: 20px;
+            }
+
+            .item {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Search Box -->
+    <div class="search-container">
+        <h1>ATHRI</h1> <!-- ATHRI text added here -->
+        <input type="text" class="search-box" placeholder="Search..." id="searchBox">
+    </div>
+
+    <!-- Sections Container -->
+    <div class="sections-container">
+        <!-- Section 1 -->
+        <div class="section" id="section1" data-search="sweets & refreshments">
+            <h3>sweets & refreshments</h3>
+            <a href="https://www.google.com/maps/dir/36.8656835,42.987646/VX8G%2BV8M+Roben+Kunafa,+Duhok,+Duhok+Governorate/@36.8632868,42.9763906,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40088d0051df56f3:0x39be496965d0d833!2m2!1d42.9757623!2d36.8673206?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="item" data-search="roben Kunafa">
+                <img src="OIP.jfif" alt="Roben Kunafa"> 
+                <p>roben Kunafa</p>
+            </a>
+            <a href="https://www.google.com/maps/dir/36.859525,42.987937/VX4G%2BVPX+Gashetiyar-%D8%A7%D9%84%D8%B3%D8%A7%D8%A6%D8%AD%D8%A9%D8%AF%D9%87%D9%88%D9%83,+Unnamed+Road,+Duhok,+Duhok+Governorate%E2%80%AD/@36.8632393,42.9741287,15z/data=!3m1!4b1!4m17!1m7!3m6!1s0x40088d071b030ed7:0x42168b71f3c569f5!2zR2FzaGV0aXlhci3Yp9mE2LPYp9im2K3Yqdiv2YfZiNmD!8m2!3d36.857244!4d42.9768575!16s%2Fg%2F11h4d374gz!4m8!1m1!4e1!1m5!1m1!1s0x40088d071b030ed7:0x42168b71f3c569f5!2m2!1d42.9768575!2d36.857244?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="item" data-search="gashtyar sweets">
+                <img src="Gashtyar_Sweets_Pineapple638588792522964686.webp" alt="Gashtyar Sweets"> 
+                <p>gashtyar sweets</p>
+            </a>
+            <a href="https://www.google.com/maps/dir/36.859525,42.987937/Happy+day+sweets,+Zeri+Land+Street,+Duhok/@36.8669481,42.9557276,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40088ce7f9206c6f:0xfd96dc20a632b117!2m2!1d42.9587999!2d36.872893?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="item" data-search="happy day sweets">
+                <img src="images.jfif" alt="Happy Day Sweets"> 
+                <p>happyday sweets</p>
+            </a>
+        </div>
+
+
+        <div class="section" id="section1" data-search="cafe">
+            <h3>cafe</h3>
+            <a href="https://www.google.com/maps/dir/36.865553,42.9880179/36.8655577,42.9880081/@36.8655553,42.9873259,19z/data=!3m1!4b1!4m5!4m4!1m1!4e1!1m1!4e1?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" class="item" data-search="roben Kunafa">
+                <img src="images (1).jfif" alt="brusk"> 
+                <p>brusk cafe</p>
+            </a>
+            <a href="https://www.google.com/maps/dir/36.8655563,42.987998/V2F4%2BWW2+Baz+Cafe,+Duhok,+Duhok+Governorate/@36.8683728,42.9770108,14z/data=!3m1!4b1!4m17!1m7!3m6!1s0x40088da166661a41:0xe239a491467fc6ec!2sBaz+Cafe!8m2!3d36.8747669!4d43.0072581!16s%2Fg%2F11by__qybh!4m8!1m1!4e1!1m5!1m1!1s0x40088da166661a41:0xe239a491467fc6ec!2m2!1d43.007258!2d36.8747668?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" class="item" data-search="gashtyar sweets">
+                <img src="images (2).jfif" alt="baz cafe"> 
+                <p>baz cafe</p>
+            </a>
+            <a href="https://www.google.com/maps/dir/36.859525,42.987937/Happy+day+sweets,+Zeri+Land+Street,+Duhok/@36.8669481,42.9557276,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40088ce7f9206c6f:0xfd96dc20a632b117!2m2!1d42.9587999!2d36.872893?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="item" data-search="happy day sweets">
+                <img src="images (3).jfif" alt="cukur"> 
+                <p>cukur cafe</p>
+            </a>
+        </div>
+    
+        <div class="section" id="section2" data-search="historical sites">
+            <h3>historical sites</h3>
+            <a href="https://www.google.com/maps/dir/Duhok/Khanis/@36.7591344,43.0081363,11z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x40088dc9f9b9c571:0xf62e38c72158c89b!2m2!1d42.9884805!2d36.8632107!1m5!1m1!1s0x4006268f44739495:0x8ab952a1f7f36e6!2m2!1d43.4112289!2d36.7536473?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="item" data-search="Khanis">
+                <img src="khenis_604.jpg" alt="Khanis"> 
+                <p>KHANIS</p>
+            </a>
+          
+            <a href="https://www.google.com/maps/dir/Duhok/Sumel/@36.8560345,42.8356566,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x40088dc9f9b9c571:0xf62e38c72158c89b!2m2!1d42.9884805!2d36.8632107!1m5!1m1!1s0x4008f4e2e8825d0d:0x13423f3c6e624483!2m2!1d42.8476419!2d36.8608157?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="item" data-search="7Tabakh Graveyard">
+                <img src="armenian_genocide.jpg" alt="7Tabakh Graveyard"> 
+                <p>7 TABAKH GRAVEYARD "semel"</p>
+            </a>
+            <a href="https://www.google.com/maps/dir/Duhok/Shirqat/@36.095819,41.8147337,8z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x40088dc9f9b9c571:0xf62e38c72158c89b!2m2!1d42.9884805!2d36.8632107!1m5!1m1!1s0x1553aa0ca8725505:0x7d3c1a6901842fc2!2m2!1d43.222498!2d35.5111081?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="item" data-search="Ashur">
+                <img src="opener_-_janfeb2022_b14_iraqguardians.webp" alt="Ashur"> 
+                <p>ASHUR</p>
+            </a>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section" id="section3" data-search="villages">   
+            <h3>villages</h3>
+            <a href="https://www.google.com/maps/place/Assyrian+Chelek/@37.25438,42.5837803,10z/data=!4m10!1m2!2m1!1sassyrian+celek!3m6!1s0x4008d5007be84859:0xceb41741ec8d29a9!8m2!3d37.254371!4d43.16046!15sCg5hc3N5cmlhbiBjZWxla1oQIg5hc3N5cmlhbiBjZWxla5IBBmNodXJjaJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSdU5EWkhZMXBuRUFF4AEA!16s%2Fg%2F11whf_cp62?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" class="item" data-search="chalik">
+                <img src="images (4).jfif" alt="chalik"> 
+                <p>CHALIK</p>
+            </a>
+            <a href="https://www.google.com/maps/place/Assyrian+Chelek/@37.25438,42.5837803,10z/data=!4m10!1m2!2m1!1sassyrian+celek!3m6!1s0x4008d5007be84859:0xceb41741ec8d29a9!8m2!3d37.254371!4d43.16046!15sCg5hc3N5cmlhbiBjZWxla1oQIg5hc3N5cmlhbiBjZWxla5IBBmNodXJjaJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSdU5EWkhZMXBuRUFF4AEA!16s%2Fg%2F11whf_cp62?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" class="item" data-search="maye">
+                <img src="images (5).jfif" alt="maye"> 
+                <p>maye</p>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/36.859525,42.987937/Nahla/@36.7479714,43.118343,10z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40061b32f9181f0b:0x167a4f32eaeb5aa2!2m2!1d43.7049203!2d36.8684489?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="item" data-search="Nahla">
+                <img src="DiQ9bpvW4AAC5H8.jpg" alt="Nahla"> 
+                <p>NALLA</p>
+            </a>
+            <a href="https://www.google.com/maps/dir/Duhok/7536%2BP5+Assyrian+Chelek,+GUND%C3%8D+%C3%87ELK%C3%8A,+Duhok+Governorate/@37.0500914,42.6066115,10z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x40088dc9f9b9c571:0xf62e38c72158c89b!2m2!1d42.9884805!2d36.8632107!1m5!1m1!1s0x4008d5007be84859:0xceb41741ec8d29a9!2m2!1d43.1605222!2d37.2543939?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="item" data-search="Barwar">
+                <img src="284052730_564820151739123_232991263580558453_n.png" alt="Barwar"> 
+                <p>BARWAR</p>
+            </a>
+            <a href="https://www.google.com/maps/dir/Duhok/Deraluk/@36.9753392,42.9832685,10z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x40088dc9f9b9c571:0xf62e38c72158c89b!2m2!1d42.9884805!2d36.8632107!1m5!1m1!1s0x400f52ded45ccc5d:0x86fe888475e4f134!2m2!1d43.64897!2d37.0544034?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="item" data-search="Deraloka">
+                <img src="287580.jpg" alt="Deraloka"> 
+                <p>DERALOQA</p>
+            </a>
+            <a href="https://www.google.com/maps/dir/Duhok/Bablo+Park,+Duhok/@36.8668647,42.9732211,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x40088dc9f9b9c571:0xf62e38c72158c89b!2m2!1d42.9884805!2d36.8632107!1m5!1m1!1s0x400891120c3c259b:0x865accc98892d319!2m2!1d43.1362114!2d36.8843869?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="item" data-search="Bablo Park">
+                <img src="https://via.placeholder.com/200" alt="Bablo Park"> 
+                <p>BABLO</p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Get elements
+        const searchBox = document.getElementById('searchBox');
+        const sections = document.querySelectorAll('.section');
+        const items = document.querySelectorAll('.item');
+
+        // Event listener for search box input
+        searchBox.addEventListener('input', function() {
+            const query = searchBox.value.toLowerCase();
+
+            // Loop through each section
+            sections.forEach(section => {
+                let sectionVisible = false; // Flag to track if the section should be visible
+
+                // Check if section name matches query
+                const sectionName = section.dataset.search.toLowerCase();
+                const sectionItems = section.querySelectorAll('.item');
+
+                // Loop through each item in the section
+                sectionItems.forEach(item => {
+                    const itemText = item.dataset.search.toLowerCase();
+
+                    if (itemText.includes(query) || sectionName.includes(query)) {
+                        item.style.display = 'block'; // Show item if it matches the query
+                        sectionVisible = true;
+                    } else {
+                        item.style.display = 'none'; // Hide item if it doesn't match
+                    }
+                });
+
+                // If any item in the section is visible, show the section; otherwise, hide it
+                if (sectionVisible) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
